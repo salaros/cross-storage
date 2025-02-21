@@ -7,7 +7,8 @@
   <script>
     // Limit requests to any client running on .localhost:300x
     CrossStorageHub.init([
-      {origin: /.*localhost:300\d$/, allow: ['get', 'set', 'del']}
+      {origin: /.*localhost:550\d$/, allow: ['get', 'set', 'del']},
+      {origin: /.*127.0.0.1:550\d$/, allow: ['get', 'set', 'del', 'getKeys']}
     ]);
   </script>
 </body>

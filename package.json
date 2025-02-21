@@ -1,35 +1,31 @@
 {
-  "name": "cross-storage",
+  "name": "shared-storage",
   "version": "1.0.0",
-  "description": "Cross domain local storage",
+  "description": "Shared storage failling back on Zendesk's cross domain local storage",
   "keywords": [
+    "shared",
     "local",
     "storage",
     "cross",
     "domain"
   ],
-  "main": "lib/index.js",
   "author": "Daniel St. Jules <danielst.jules@gmail.com>",
   "license": "Apache-2.0",
-  "homepage": "https://github.com/zendesk/cross-storage",
+  "homepage": "https://github.com/salaros/shared-storage",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zendesk/cross-storage.git"
+    "url": "https://github.com/salaros/shared-storage.git"
   },
   "devDependencies": {
-    "connect": "^2.25.7",
-    "expect.js": "^0.3.1",
-    "gulp": "*",
-    "gulp-jshint": "^1.8.4",
-    "gulp-rename": "^1.2.0",
-    "gulp-uglify": "^0.3.1",
-    "gulp-header": "^1.1.1",
-    "gulp-rimraf": "^0.1.0",
-    "serve-static": "^1.5.3",
-    "zuul": "~3.10.1"
+    "@types/uuid": "^10.0.0",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.7.3"
   },
   "scripts": {
-    "test": "./node_modules/.bin/zuul --local 8080 --ui mocha-bdd -- test/test.js",
-    "saucetest": "./node_modules/.bin/zuul --ui mocha-bdd -- test/test.js"
+    "test": "echo Tests",
+    "build": "esbuild src/**/*.ts --format=esm --platform=browser --bundle --sourcemap --outdir=dist/ && tsc --declaration --emitDeclarationOnly"
+  },
+  "dependencies": {
+    "uuid": "^11.1.0"
   }
 }

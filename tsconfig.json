@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "strictNullChecks": true,
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "declaration": true,
+    "preserveConstEnums": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "lib": [
+      "dom",
+      "ES2020"
+    ],
+    "rootDir": "src/",
+    "outDir": "dist/"
+  },
+  "include": [
+    "src/"
+  ]
+}
